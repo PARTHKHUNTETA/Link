@@ -11,6 +11,8 @@ import AddExperience from './components/profile-forms/AddExperience'
 import AddEducation from './components/profile-forms/AddEducation'
 import Profiles from './components/profiles/Profiles'
 import Profile from './components/profile/Profile'
+import Posts from './components/posts/Posts'
+import Post from './components/post/Post'
 import PivateRoute from './components/routing/PrivateRoute'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { loadUser } from './actions/auth'
@@ -47,6 +49,8 @@ const App = () => {
               <PivateRoute exact path='/edit-profile' component={EditProfile} />
               <PivateRoute exact path='/add-education' component={AddEducation} />
               <PivateRoute exact path='/add-experience' component={AddExperience} />
+              <PivateRoute exact path='/posts' component={Posts} />
+              <PivateRoute exact path='/posts/:id' component={Post} />
             </Switch>
           </section>
         </Fragment>
