@@ -31,7 +31,6 @@ const reducer = (state = initialState, action) => {
         case LOGIN_FAIL:
         case ACCOUNT_DELETED:
         case LOGOUT:
-            localStorage.removeItem('token')
             return {
                 ...state,
                 token: null,
